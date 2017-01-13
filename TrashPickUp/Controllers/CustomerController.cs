@@ -56,6 +56,7 @@ namespace TrashPickUp.Controllers
                 return RedirectToAction("Index");
             }
 
+
             return View(customer);
         }
 
