@@ -1,0 +1,99 @@
+﻿@model IEnumerable<TrashPickUp.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.daily)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickup_day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vacation_start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vacation_end)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount_owed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.on_vacation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.daily)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickup_day)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vacation_start)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vacation_end)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount_owed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.on_vacation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zipcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.customer_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.customer_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.customer_ID })
+        </td>
+    </tr>
+}
+
+</table>
