@@ -1,46 +1,40 @@
 namespace TrashPickUp.Migrations
 {
+    using TrashPickUp.Models;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using TrashPickUp.Models;
-    internal sealed class Configuration : DbMigrationsConfiguration<TrashPickUp.DAL.TrashContext>
-    {
-        public Configuration()
-        {
-            AutomaticMigrationsEnabled = false;
-        }
 
-        protected override void Seed(TrashPickUp.DAL.TrashContext context)
+
+    internal sealed class Configuration : DbMigrationsConfiguration<TrashPickUp.Models.ApplicationDbContext>
+    {
+        protected override void Seed(TrashPickUp.Models.ApplicationDbContext context)
         {
-            var customers = new List<Customer>
+            var students = new List<Customer>
             {
-                new Customer { customer_ID = 1, login = "Jason",   password = "password",
-                    daily = "Y", pickup_day = 1, vacation_start = null, vacation_end = null,
-                    amount_owed = 25.67, address = "3807 Nagawicka Shores Drive", city = "Hartland",
-                    state = "WI", zipcode = "53209", on_vacation = "N"},
-           };
-            customers.ForEach(s => context.Customers.AddOrUpdate(p => p.login, s));
+                new Customer { Login = "Jason", Password = "password", Address = "3807 Nagawicka Shores Drive", State = "WI", Zipcode = "53029", AmountOwed = 45.32,
+                    OnVacation = "N", CustomerID = 1, VacationEnd = null, VacationStart = null}
+            };
+            students.ForEach(s => context.Customers.AddOrUpdate(p => p.Login, s));
             context.SaveChanges();
 
-        var employees = new List<Employee>
+            var employees = new List<Employee>
             {
-                new Employee {employee_ID = 1, login = "Bert", password = "password" }
-
+                new Employee {EmployeeID = 1, Login = "Bert", Password = "password"}
             };
-            employees.ForEach(s => context.Employees.AddOrUpdate(p => p.login, s));
+            employees.ForEach(s => context.Employees.AddOrUpdate(p => p.Login, s));
             context.SaveChanges();
 
             var admins = new List<Admin>
             {
-                new Admin {admin_ID = 1, login = "Admin", password = "password"},
+                 new Admin {AdminID = 1, Login = "Admin", Password = "password"
+                 }
             };
-
-            admins.ForEach(s => context.Admins.AddOrUpdate(p => p.login, s));
-
+            admins.ForEach(s => context.Admins.AddOrUpdate(p => p.Login, s));
             context.SaveChanges();
+
         }
     }
 }
