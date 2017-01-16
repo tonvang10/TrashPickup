@@ -2,7 +2,7 @@ namespace TrashPickUp.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class fixingTables : DbMigration
     {
         public override void Up()
@@ -165,9 +165,9 @@ namespace TrashPickUp.Migrations
             DropForeignKey("dbo.Routes", "AddressID", "dbo.Addresses");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.RegisterdUserInfoes", "currentUser_Id", "dbo.AspNetUsers");
-            DropForeignKey("dbo.PickUpDays", "EmployeeID", "dbo.Employees");
+            //DropForeignKey("dbo.PickUpDays", "EmployeeID", "dbo.Employees");
             DropForeignKey("dbo.PickUpDays", "AddressID", "dbo.Addresses");
-            DropForeignKey("dbo.Employees", "UserID", "dbo.AspNetUsers");
+            //DropForeignKey("dbo.Employees", "UserID", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
@@ -176,7 +176,7 @@ namespace TrashPickUp.Migrations
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.RegisterdUserInfoes", new[] { "currentUser_Id" });
             DropIndex("dbo.PickUpDays", new[] { "AddressID" });
-            DropIndex("dbo.PickUpDays", new[] { "EmployeeID" });
+            //DropIndex("dbo.PickUpDays", new[] { "EmployeeID" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
@@ -192,7 +192,7 @@ namespace TrashPickUp.Migrations
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
-            //DropTable("dbo.Employees");
+            DropTable("dbo.Employees");
             DropTable("dbo.Calendars");
             DropTable("dbo.Addresses");
         }
