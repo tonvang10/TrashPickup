@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201701161524380_SecondCreate.Designer.cs">
       <DependentUpon>201701161524380_SecondCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701161647262_fixingTables.cs" />
+    <Compile Include="Migrations\201701161647262_fixingTables.Designer.cs">
+      <DependentUpon>201701161647262_fixingTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -297,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161524380_SecondCreate.resx">
       <DependentUpon>201701161524380_SecondCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161647262_fixingTables.resx">
+      <DependentUpon>201701161647262_fixingTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
