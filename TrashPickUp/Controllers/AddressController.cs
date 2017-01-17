@@ -18,29 +18,19 @@ namespace TrashPickUp.Models
         // GET: Address
         public ActionResult Index()
         {
-            var userId = User.Identity.GetUserId();
+            
 
             return View(/*db.address.ToList()*/);
         }
 
-        // GET: Address/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    //Address address = db.address.Find(id);
-        //    if (address == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(address);
-        //}
+        
 
         // GET: Address/Create
-        public ActionResult Create()
+        public ActionResult Index(Customer plan)
         {
+            db.Customers.Add(plan);
+            db.SaveChanges();
+            
             return View();
         }
 

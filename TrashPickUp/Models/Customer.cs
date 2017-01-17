@@ -17,5 +17,12 @@ namespace TrashPickUp.Models
         public string VacationStart { get; set; }
         public string VacationEnd { get; set; }
         public double AmountOwed { get; set; }
+        public string Email { get; set; }
+        public string UserName { get; set; }
+        public string PickupDay { get; set; }
+        public string PhoneNumber { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+
     }
 }

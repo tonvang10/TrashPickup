@@ -219,6 +219,14 @@
     <Compile Include="Migrations\201701162211556_Minor fix.Designer.cs">
       <DependentUpon>201701162211556_Minor fix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701171402185_why.cs" />
+    <Compile Include="Migrations\201701171402185_why.Designer.cs">
+      <DependentUpon>201701171402185_why.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701171420540_why1.cs" />
+    <Compile Include="Migrations\201701171420540_why1.Designer.cs">
+      <DependentUpon>201701171420540_why1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -314,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701162211556_Minor fix.resx">
       <DependentUpon>201701162211556_Minor fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171402185_why.resx">
+      <DependentUpon>201701171402185_why.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171420540_why1.resx">
+      <DependentUpon>201701171420540_why1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

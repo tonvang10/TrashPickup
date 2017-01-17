@@ -1,7 +1,20 @@
-﻿
+﻿@model TrashPickUp.Models.Customer
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Viewing Customers</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    if (Model.Login != null)
+    {
+        foreach (var customer in Model.Login)
+        {
+        @customer
+
+        }
+    }
+}
 

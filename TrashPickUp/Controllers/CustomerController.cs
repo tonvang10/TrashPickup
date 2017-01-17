@@ -11,7 +11,7 @@ namespace TrashPickUp.Controllers
     public class CustomerController : Controller
     {
         private ApplicationDbContext _context;
-
+        private ApplicationDbContext db = new ApplicationDbContext();
         public CustomerController()
         {
             _context = new ApplicationDbContext();
@@ -19,9 +19,23 @@ namespace TrashPickUp.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            var customers = _context.Customers.ToList();
+            
 
-            return View(customers);
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit1(/*[Bind(Include = "ID,Street,ApartmentNumber,City,State,ZipCode")] */Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(customer).State = EntityState.Modified;
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(customer);
         }
     }
 }
