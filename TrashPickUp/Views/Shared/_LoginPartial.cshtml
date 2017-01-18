@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model IEnumerable<TrashPickUp.Models.Customer> 
+@model TrashPickUp.Models.Customer  
 @if (Request.IsAuthenticated && (User.Identity.GetUserName() != null))
 
 
@@ -18,7 +18,9 @@
         <li>
             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
-        <li><a href="google.com">Words on Words</a></li>
+        <li>
+            @Html.ActionLink("this is the admins link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
                 }
@@ -35,6 +37,9 @@
                         <li>
                             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
                         </li>
+                        <li>
+                            @Html.ActionLink("this is the workers link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        </li>
                         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                     </ul>
                 }
@@ -50,6 +55,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("this is the customer link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+
                         </li>
                         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                     </ul>
