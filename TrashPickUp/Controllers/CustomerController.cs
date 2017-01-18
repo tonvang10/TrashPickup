@@ -19,9 +19,13 @@ namespace TrashPickUp.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            
+            ViewData["testing"] = from c in _context.Customers select c;
+            //var x = /*(from per in db.Customers select */new Customer() /*{ FirstName = per.FirstName, Zipcode = per.Zipcode, Login = per.Login }*/;
+            var x = db.Customers;
+            //var customers = db.Customers;
 
-            return View();
+
+            return View(x);
         }
 
         [HttpPost]

@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrashPickUp.Models
 {
-    public class Customer
+    //public class Customer : DbContext
+    //{
+    //    public DbSet<Customer> Customers { get; set; }
+        
+    //}
+
+    public class Customer 
     {
+        [Key]
         public int CustomerID { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
