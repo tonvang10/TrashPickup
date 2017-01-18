@@ -1,7 +1,42 @@
-﻿
+﻿@model IEnumerable<TrashPickUp.Models.Customer>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+@{
+    if (IsPost)
+    {
+        string zipcode = Request["Zipcode"];
+        <p>
+            You entered: <br />
+            Zipcode: @zipcode <br />
+        </p>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(customer.LastName, "Details", "Players", new { Login = customer.Login }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+
+    else
+    {
+        <form method="post" action="">
+            Zipcode:<br />
+            <input type="text" name="Zipcode" value="" /><br />
+            <input type="submit" value="Submit" class="submit" />
+        </form>
+    }
+} 
