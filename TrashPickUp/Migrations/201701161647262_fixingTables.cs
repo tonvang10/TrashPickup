@@ -48,11 +48,13 @@ namespace TrashPickUp.Migrations
                 c => new
                 {
                     Id = c.String(nullable: false, maxLength: 128),
+                    UserName = c.String(nullable: false, maxLength: 256),
                     FirstName = c.String(),
                     LastName = c.String(),
-                    Address_id = c.Int(),
-                    PickupDay = c.String(),
                     Email = c.String(maxLength: 256),
+                    Addresses = c.String(),
+                    PickupDay = c.String(),
+                    Roles= c.Int(),
                     EmailConfirmed = c.Boolean(nullable: false),
                     PasswordHash = c.String(),
                     SecurityStamp = c.String(),
@@ -62,11 +64,10 @@ namespace TrashPickUp.Migrations
                     LockoutEndDateUtc = c.DateTime(),
                     LockoutEnabled = c.Boolean(nullable: false),
                     AccessFailedCount = c.Int(nullable: false),
-                    UserName = c.String(nullable: false, maxLength: 256),
+                    
                 })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Addresses", t => t.Address_id)
-                .Index(t => t.Address_id)
+                
                 .Index(t => t.UserName, unique: true, name: "UserNameIndex");
 
             CreateTable(
