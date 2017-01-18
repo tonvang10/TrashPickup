@@ -15,6 +15,7 @@ namespace TrashPickUp.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -147,18 +148,22 @@ namespace TrashPickUp.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(Customer customer)
+        public async Task<ActionResult> Register( Customer customer)
         {
-            
+            Customer use2 = new Customer();
+            use2 = new Customer { UserName = customer.UserName, Email = customer.Email, PhoneNumber = customer.PhoneNumber, PickupDay = customer.PickupDay, FirstName = customer.FirstName, LastName = customer.LastName };
             if (ModelState.IsValid)
             {
                 
-                var user = new ApplicationUser { UserName = customer.UserName, Email = customer.Email,PhoneNumber = customer.PhoneNumber, PickupDay = customer.PickupDay, FirstName =customer.FirstName, LastName = customer.LastName };
+                var user = new  ApplicationUser { UserName = customer.UserName, Email = customer.Email,PhoneNumber = customer.PhoneNumber, PickupDay = customer.PickupDay, FirstName =customer.FirstName, LastName = customer.LastName };
                 var result = await UserManager.CreateAsync(user, customer.Password);
                 if (result.Succeeded)
                 {
+                    db.Set<Customer>();
+                    db.Customers.Add(use2);
+                    db.SaveChanges();
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-
+                    
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
