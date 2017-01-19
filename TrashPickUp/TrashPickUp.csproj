@@ -236,6 +236,14 @@
     <Compile Include="Migrations\201701191516316_fix.Designer.cs">
       <DependentUpon>201701191516316_fix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701191734120_Added Roles to CUstomer.cs" />
+    <Compile Include="Migrations\201701191734120_Added Roles to CUstomer.Designer.cs">
+      <DependentUpon>201701191734120_Added Roles to CUstomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701191744139_Changed ROles again.cs" />
+    <Compile Include="Migrations\201701191744139_Changed ROles again.Designer.cs">
+      <DependentUpon>201701191744139_Changed ROles again.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -346,6 +354,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701191516316_fix.resx">
       <DependentUpon>201701191516316_fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191734120_Added Roles to CUstomer.resx">
+      <DependentUpon>201701191734120_Added Roles to CUstomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701191744139_Changed ROles again.resx">
+      <DependentUpon>201701191744139_Changed ROles again.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

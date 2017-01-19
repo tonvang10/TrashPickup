@@ -21,6 +21,7 @@ namespace TrashPickUp.Controllers
 
         public AccountController()
         {
+            var context = new ApplicationDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
@@ -140,6 +141,9 @@ namespace TrashPickUp.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var context = new ApplicationDbContext();
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
+                                             .ToList(), "Name", "Name");
             return View();
         }
 
