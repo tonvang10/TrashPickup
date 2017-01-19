@@ -21,6 +21,8 @@
         <li>
             @Html.ActionLink("this is the admins link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
+          <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+         <li>@Html.ActionLink("Customer", "Index", "Customer")</li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
                 }
@@ -40,6 +42,7 @@
                         <li>
                             @Html.ActionLink("this is the workers link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
                         </li>
+                        <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
                         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                     </ul>
                 }
@@ -60,6 +63,7 @@
                             @Html.ActionLink("this is the customer link", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
 
                         </li>
+                        <li>@Html.ActionLink("Customer", "Index", "Customer")</li>
                         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                     </ul>
                 }

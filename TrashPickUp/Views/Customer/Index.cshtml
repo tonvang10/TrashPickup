@@ -1,4 +1,4 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
     @model IEnumerable<TrashPickUp.Models.Customer>
     
     @{
@@ -7,15 +7,18 @@
     }
 
         <h2>Viewing Customers</h2>
-        @foreach (var item in Model)
+<li>
+    @User.Identity.GetUserName()
+    </li>
+        @*@foreach (var item in Model)
         {
-            if (item.Login != null)
+            if (item.UserName != null)
             {
                 <table>
-                    <tr>@item.Login</tr>
+                    <tr>@item.UserName</tr>
                 </table>
             }
-        }
+        }*@
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
     <table>
