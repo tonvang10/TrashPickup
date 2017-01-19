@@ -33,7 +33,7 @@ namespace TrashPickUp.Models
         public string PickupDay { get; set; }
 
         public ApplicationUser currentUser { get; set; }
-       
+
 
         [Display(Name = "Check box and select date range")]
         public bool IsOnVacation { get; set; }

@@ -1,18 +1,19 @@
 ﻿
-    @model TrashPickUp.Models.Customer   
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Viewing Customers</h2>
-@foreach (var b in Model)
-{
-    if (b.Login != null)
-    {
-        <table>
-            <tr>@b.Login</tr>
-        </table>
+    @model IEnumerable<TrashPickUp.Models.Customer>
+    
+    @{
+        
+            ViewBag.Title = "Index";
     }
-}
 
-       
+        <h2>Viewing Customers</h2>
+        @foreach (var item in Model)
+        {
+            if (item.Login != null)
+            {
+                <table>
+                    <tr>@item.Login</tr>
+                </table>
+            }
+        }
+
