@@ -18,13 +18,8 @@ namespace TrashPickUp.Models
         // GET: Address
         public ActionResult Index()
         {
-            
-
-            return View(/*db.address.ToList()*/);
+            return View();
         }
-
-        
-
         // GET: Address/Create
         public ActionResult Index(Customer plan)
         {
@@ -35,8 +30,6 @@ namespace TrashPickUp.Models
         }
 
         //// POST: Address/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         //public ActionResult Create([Bind(Include = "ID,Street,ApartmentNumber,City,State,ZipCode")] Address address)
@@ -67,8 +60,6 @@ namespace TrashPickUp.Models
         //}
 
         // POST: Address/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Street,ApartmentNumber,City,State,ZipCode")] Address address)

@@ -65,11 +65,12 @@
             {
                 if (customer.Address != null && customer.Zipcode != null)
                 {
-                    string User = customer.Address + "," + customer.Zipcode;
-                    <option value=User>@customer.LastName </option>
+                    string User = customer.Address + ", WI " + customer.Zipcode;
+                    <option value="@User">@customer.LastName </option>
                 }
-
+                 
             }
+            <option value="6537 Hillcrest dr WI 53213, USA">mine</option>
             <option value="333 N Plankinton Ave, 53203">Trash Pick-Up</option>
 
         </select>
