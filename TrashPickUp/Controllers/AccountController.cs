@@ -160,7 +160,7 @@ namespace TrashPickUp.Controllers
                 if (result.Succeeded)
                 {
                     db.Set<Customer>();
-                    //db.Customers.Add(use2);
+                    db.Customers.Add(use2);
                     db.SaveChanges();
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     

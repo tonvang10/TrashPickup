@@ -35,7 +35,7 @@ namespace TrashPickUp.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(customer).State = EntityState.Modified;
-                //db.Customers.Add(customer);
+                db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

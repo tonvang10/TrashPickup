@@ -116,30 +116,5 @@ namespace TrashPickUp.Models
             }
             base.Dispose(disposing);
         }
-        ////Create 3 action to get the view where we will show google map
-        ////1. Index - for return view where i will show google map
-        //public ActionResult Index()
-        //{
-        //    return View;
-        //}
-        ////2. GetAllLocation - for fetch all the location from database and show in the view
-        //public JsonResult GetAllLocation()
-        //{
-        //    using (ApplicationDbContext db = new ApplicationDbContext())
-        //    {
-        //        var v = db.Locations.OrderBy(a => a.Title).ToList();
-        //        return new JsonResult { Data = v, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-        //    }
-        //}
-        ////3. GetMarkerInfo - for fetch location details from database for show marker in the map
-        //public JsonResult GetMarkerInfo(int locationID)
-        //{
-        //    using (MyDatabaseEntities dc = new MyDatabaseEntities())
-        //    {
-        //        Location 1 = null;
-        //        1 = dc.Locations.Where(a => a.LocationID.Equals(locationID)).FirstOrDefault();
-        //        return new JsonResult { Data = 1, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-        //    }
-        //}
     }
 }
