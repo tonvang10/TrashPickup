@@ -7,13 +7,13 @@ namespace TrashPickUp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class delted : IMigrationMetadata
+    public sealed partial class fix : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(delted));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fix));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701172324440_delted"; }
+            get { return "201701191516316_fix"; }
         }
         
         string IMigrationMetadata.Source

@@ -232,13 +232,9 @@
     <Compile Include="Migrations\201701171954543_turn_on_auto.Designer.cs">
       <DependentUpon>201701171954543_turn_on_auto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201701172117333_ohwhy.cs" />
-    <Compile Include="Migrations\201701172117333_ohwhy.Designer.cs">
-      <DependentUpon>201701172117333_ohwhy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701172324440_delted.cs" />
-    <Compile Include="Migrations\201701172324440_delted.Designer.cs">
-      <DependentUpon>201701172324440_delted.cs</DependentUpon>
+    <Compile Include="Migrations\201701191516316_fix.cs" />
+    <Compile Include="Migrations\201701191516316_fix.Designer.cs">
+      <DependentUpon>201701191516316_fix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -348,11 +344,8 @@
     <EmbeddedResource Include="Migrations\201701171954543_turn_on_auto.resx">
       <DependentUpon>201701171954543_turn_on_auto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701172117333_ohwhy.resx">
-      <DependentUpon>201701172117333_ohwhy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701172324440_delted.resx">
-      <DependentUpon>201701172324440_delted.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701191516316_fix.resx">
+      <DependentUpon>201701191516316_fix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
