@@ -53,13 +53,7 @@
         <b>Start:</b>
         <select id="start">
             <option value="333 N Plankinton Ave, 53203">Trash Pick-Up</option>
-            @*@foreach (var customer in Model)
-            {
-                for (int i = 1; i <= Model.Count(); i++)
-                {
-                    <option value="@customer.Street, @customer.Address , @customer.Zipcode">@customer.LastName </option>
-                }
-            }*@
+            
         </select>
         <b>Customers Location</b>
 
@@ -67,6 +61,15 @@
         <br>
         <b>End:</b>
         <select id="end">
+            @foreach (var customer in Model)
+            {
+                if (customer.Address != null && customer.Zipcode != null)
+                {
+                    string User = customer.Address + "," + customer.Zipcode;
+                    <option value=User>@customer.LastName </option>
+                }
+
+            }
             <option value="333 N Plankinton Ave, 53203">Trash Pick-Up</option>
 
         </select>

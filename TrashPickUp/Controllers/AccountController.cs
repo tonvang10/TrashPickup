@@ -151,7 +151,7 @@ namespace TrashPickUp.Controllers
         public async Task<ActionResult> Register( Customer customer)
         {
             Customer use2 = new Customer();
-            use2 = new Customer { UserName = customer.UserName, Email = customer.Email, Address =customer.Address , PhoneNumber = customer.PhoneNumber, PickupDay = customer.PickupDay, FirstName = customer.FirstName, LastName = customer.LastName };
+            use2 = new Customer { UserName = customer.UserName, Email = customer.Email, Address =customer.Address , PhoneNumber = customer.PhoneNumber, PickupDay = customer.PickupDay, FirstName = customer.FirstName, LastName = customer.LastName , Zipcode= customer.Zipcode};
             if (ModelState.IsValid)
             {
                 
